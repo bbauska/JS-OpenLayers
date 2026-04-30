@@ -1,8 +1,13 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ quickStart.md ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1>Quick Start</h1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This primer shows you how to put a map on a web page. The development setup uses <a href="https://nodejs.org/">
 Node</a> (14 or higher) and requires that you have <a href="https://github.com/git-guides/install-git">git</a> installed.
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Set up a new project</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The easiest way to start building a project with OpenLayers is to run <mark>npm create ol-app</mark>:
 
 ```
@@ -22,14 +27,17 @@ The <b>third command (<mark>npm start</mark>)</b> starts a development server so
 while working on it. After running npm start, you'll see output that tells you the URL to open. Open 
 <a href="http://localhost:5173/">http://localhost:5173/</a> (or whatever URL is displayed) to see your new application.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Exploring the parts</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 An OpenLayers application is composed of three basic parts:
 
 The HTML markup with an element to contain the map (<mark>index.html</mark>)
 The JavaScript that initializes the map (<mark>main.js</mark>)
 The CSS styles that determine the map size and any other customizations (<mark>style.css</mark>)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The markup</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Open the <mark>index.html</mark> file in a text editor. It should look something like this:
 
 ```
@@ -52,7 +60,9 @@ and the <mark>&lt;script&gt;</mark> tag to pull in the JavaScript. The map conta
 should be a block level element (like a <mark>&lt;div&gt;</mark>) and it must appear in the document 
 before the <mark>&lt;script&gt;</mark> tag that initializes the map.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The script</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Open the <mark>main.js</mark> file in a text editor. It should look something like this:
 
 ```
@@ -76,7 +86,7 @@ const map = new Map({
 });
 ```
 
-OpenLayers is packaged as a collection of <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">>ES modules</a>. The <mark>import</mark> lines are used to pull in the modules that your application needs. Take a look through the <a href="https://openlayers.org/en/latest/examples/">examples</a> and <a href="https://openlayers.org/en/latest/apidoc/">API docs</a> to understand which modules you might want to use.
+OpenLayers is packaged as a collection of <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules</a>. The <mark>import</mark> lines are used to pull in the modules that your application needs. Take a look through the <a href="https://openlayers.org/en/latest/examples/">examples</a> and <a href="https://openlayers.org/en/latest/apidoc/">API docs</a> to understand which modules you might want to use.
 
 The <mark>import './style.css';</mark> line might be a bit unexpected. In this example, we're using <a href="https://vitejs.dev/">Vite</a> as a development server. Vite allows CSS to be imported from JavaScript modules. If you were using a different development server, you might include the <mark>style.css</mark> in a <mark>&lt;link&gt;</mark> tag in the <mark>index.html</mark> instead.
 
@@ -85,7 +95,9 @@ map, giving it a single layer with an OSM source and a view describing the cente
 Read through the <a href="https://openlayers.org/doc/tutorials/concepts.html">Basic Concepts tutorial</a> 
 to learn more about <mark>Map</mark>, <mark>View</mark>, <mark>Layer</mark>, and <mark>Source</mark> components.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The style</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Open the <mark>style.css</spna> file in a text editor. It should look something like this:
 
 ```
@@ -113,8 +125,9 @@ package with <mark>npm install ol</mark>. The <mark>ol.css</mark> stylesheet inc
 creates – things like buttons for zooming in and out.
 
 The remaining rules in the <mark>style.css</mark> file make it so the <mark>&lt;div id="map"&gt;</mark> element that contains the map fills the entire page.
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Deploying your app</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can make edits to the <mark>index.html</mark>, <mark>main.js</mark>, or <mark>style.css</mark> 
 files and see the resulting change in your browser while running the development server (with <mark>npm 
 start</mark>). After you have finished making edits, it is time to bundle or build your application so 
